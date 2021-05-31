@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GitHubSearch</string>
+    <string name="hint_edit_query">Введите название репозитория, чтобы начать поиск</string>
+    <string name="hint_error">Возникла ошибка загрузки</string>
+    <string name="hint_no_results">Ничего не найдено! Попробуйте изменить запрос</string>
+    <string name="hint_empty_issue_list">В этом репозитории нет вопросов</string>
+    <string name="issue_header">Последние вопросы</string>
+    <string name="error_request_limit">Повторите запрос позже!</string>
+    <string name="labels">Теги:</string>
+</resources>

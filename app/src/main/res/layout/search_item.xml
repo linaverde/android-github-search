@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/search_item_height">
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/search_item_height"
+        android:layout_height="@dimen/search_item_height"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar"
+        app:siBorderColor="@color/light_gray"
+        app:siBorderWidth="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/iv_avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_rep_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_rep_desc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Description" />
+    </LinearLayout>
+
+</RelativeLayout>

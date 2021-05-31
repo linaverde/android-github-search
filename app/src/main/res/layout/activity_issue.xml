@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.IssueActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_owner_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="20dp">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/avatar_big_size"
+            android:layout_height="@dimen/avatar_big_size"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar"
+            app:siBorderColor="@color/light_gray"
+            app:siBorderWidth="1dp"
+            android:layout_alignEnd="@id/tv_owner" />
+
+        <TextView
+            android:id="@+id/tv_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="NAME"
+            android:layout_below="@id/iv_avatar"
+            />
+
+        <TextView
+            android:id="@+id/tv_rep_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_avatar"
+            android:layout_margin="10dp"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_owner_info"
+        android:layout_margin="10dp"
+        android:text="@string/issue_header"
+        android:textAlignment="center"
+        android:textColor="@color/dark_gray"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_hint"
+            android:layout_width="@dimen/hint_image_size"
+            android:layout_height="@dimen/hint_image_size"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_empty"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="@dimen/hint_text_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/hint_empty_issue_list"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_issues"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_header" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="@dimen/progress_bar_size"
+        android:layout_height="@dimen/progress_bar_size"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

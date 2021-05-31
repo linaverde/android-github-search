@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- For requests -->
+    <string name="url_backend">https://api.github.com/</string>
+    <string name="url_search">search/repositories</string>
+    <string name="results_per_request">20</string>
+    <string name="issue_count">30</string>
+    <string name="user_agent">Github-Search-Android</string>
+
+    <!-- For repository search data -->
+    <string name="rep_array">items</string>
+    <string name="rep_total">total_count</string>
+    <string name="rep_full_name">full_name</string>
+    <string name="rep_name">name</string>
+    <string name="rep_description">description</string>
+    <string name="owner_json_obj">owner</string>
+    <string name="owner_name">login</string>
+    <string name="avatar">avatar_url</string>
+    <string name="issues_url">issues_url</string>
+
+    <!-- For issues search data -->
+    <string name="issue_title">title</string>
+    <string name="issue_body">body</string>
+    <string name="issue_number">number</string>
+    <string name="issue_state">state</string>
+    <string name="issue_labels">labels</string>
+    <string name="issue_label_name">name</string>
+    <string name="issue_label_color">color</string>
+</resources>
