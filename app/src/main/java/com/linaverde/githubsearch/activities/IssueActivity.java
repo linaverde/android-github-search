@@ -3,6 +3,7 @@ package com.linaverde.githubsearch.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.core.widget.ContentLoadingProgressBar;
 
 import android.graphics.Bitmap;
@@ -17,7 +18,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.linaverde.githubsearch.R;
+import com.linaverde.githubsearch.helpers.DialogBuilder;
 import com.linaverde.githubsearch.helpers.RequestHelper;
+import com.linaverde.githubsearch.interfaces.CompleteActionListener;
 import com.linaverde.githubsearch.interfaces.RequestListener;
 import com.linaverde.githubsearch.models.IssueAdapter;
 import com.linaverde.githubsearch.models.IssueListItem;
@@ -114,6 +117,8 @@ public class IssueActivity extends AppCompatActivity {
                 @Override
                 public void onError(int responseCode) {
                     progressBar.hide();
+                    ((ImageView)findViewById(R.id.iv_hint)).setImageDrawable(ContextCompat.getDrawable(IssueActivity.this, R.drawable.icon_error));;
+                    ((TextView) findViewById(R.id.tv_hint)).setText(getString(R.string.hint_error));
                 }
             });
         } else {
